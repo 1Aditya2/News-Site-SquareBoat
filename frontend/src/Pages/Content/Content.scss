@@ -1,0 +1,27 @@
+.content{
+    // border: 1px solid red;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 40px;
+    .image{
+        // border: 1px solid red;
+        width: 100%;
+        height: 400px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .heading{
+        border: 1px solid red;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    .info{
+        border: 1px solid red;
+    }
+    .desc{
+        text-align: justify;
+    }
+}
