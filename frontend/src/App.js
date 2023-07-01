@@ -4,7 +4,6 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Landing from './Pages/Landing/Landing';
 import Card from './Pages/Card/Card';
-import Content from './Pages/Content/Content';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import LoadingBar from "react-top-loading-bar";
@@ -28,7 +27,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing/>}/>
         <Route path='/card' element={<Card/>}/>
-        <Route path='/content' element={<Content/>}/>
+       
       </Routes>
       
     </div>
