@@ -34,27 +34,32 @@ function Landing() {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active ">
-              <Link to={'/content'}>
+              <a href={landNews[0]?.url} target="_blank" className="lnk">
               <img className="d-block w-100" src={landNews[0]?.urlToImage} alt="First slide" />
-              </Link>
+              </a>
               <div class="carousel-caption d-none d-md-block">
                 <h5>{landNews[0]?.title}</h5>
                
               </div>
             </div>
             <div class="carousel-item">
-            <Link to={'/content'}>
+          
+              <a href={landNews[1]?.url} target="_blank" className="lnk">
               <img className="d-block w-100" src={landNews[1]?.urlToImage}  alt="Second slide" />
-              </Link>
+              </a>
+            
               <div class="carousel-caption d-none d-md-block">
                 <h5>{landNews[1]?.title}</h5>
                 {/* <p>...</p> */}
               </div>
             </div>
             <div class="carousel-item">
-              <Link to='/content'>
+              
+              <a href={landNews[2]?.url} target="_blank" className="lnk">
               <img class="d-block w-100" src={landNews[2]?.urlToImage} alt="Third slide" />
-              </Link>
+              </a>
+              
+              
               <div class="carousel-caption d-none d-md-block">
                 <h5>{landNews[2]?.title}</h5>
                 {/* <p>...</p> */}

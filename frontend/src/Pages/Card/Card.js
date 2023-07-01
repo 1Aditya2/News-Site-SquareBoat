@@ -21,17 +21,22 @@ function Card() {
       <div className="card-box">
       {catNews?.map((news) => {
         return <div className="item" key={news.publishedAt}>
-        <Link to='/content'>
+        
         <div className="image">
+          <a href={news.url} className="lnk" target="_blank">
           <img src={news.urlToImage} alt="" />
-        </div></Link>
+          </a>
+        </div>
         
         <div className="heading">
-          <Link className="lnk" to='/content'>
-          <h6>
+        <a href={news.url} className="lnk" target="_blank">
+        <h6>
             {news.title}
           </h6>
-          </Link>
+          </a>
+          
+          
+         
           
         </div>
       </div>

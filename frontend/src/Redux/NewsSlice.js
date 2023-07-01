@@ -1,18 +1,24 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import axios from "axios";
 
-export const getLandNews=createAsyncThunk('u/getLandNews',async (_)=>{
+export const getLandNews=createAsyncThunk('u/getLandNews',async (_,thunkAPI)=>{
     try {
+        thunkAPI.dispatch(setLoading(true));
         const res=await axios.get('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=c595aa2808d44f65896efdc7b29781de')
         console.log(res);
         return res.data.articles;
         
     } catch (e) {
+        
         console.log(e);
     }
+    finally{
+        thunkAPI.dispatch(setLoading(false));
+    }
 })
-export const getNewsOf=createAsyncThunk('getNewsOf',async(body,_)=>{
+export const getNewsOf=createAsyncThunk('getNewsOf',async(body,thunkAPI)=>{
     try {
+        thunkAPI.dispatch(setLoading(true));
         const newsof=body.newsof;
         console.log(newsof);
         if(newsof=='Science'){
@@ -38,6 +44,9 @@ export const getNewsOf=createAsyncThunk('getNewsOf',async(body,_)=>{
         
     } catch (e) {
         console.log(e);
+    }
+    finally{
+        thunkAPI.dispatch(setLoading(false));
     }
 })
 
